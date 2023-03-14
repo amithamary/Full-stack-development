@@ -20,11 +20,12 @@ values("R001","1","342","2018-03-10","2018-03-10","800","9000"),
 ("R005","5","241","2018-05-10","2018-05-12","900","11000"),
 ("R006","6","231","2018-05-20","2018-05-21","200","2500");
 
+
+
+######################################################ANSWERS##################################################################################3
 select car_id,car_name,car_type from car where car_id not in (select car_id from rental) order by car_id;
 select car.car_id,car_name,car_type from car inner join rental where pickup_date = null;##or
 select car_id,car_name,owner_id from car where car_type in ('fhh') order by car_id;
 select car_id,car_name,car_type from car where car_type in ('yui') order by car_id;
-
-
 SELECT c.owner_id, owner_name, address, phone_no FROM owner INNER JOIN car c on owner.owner_id=c.owner_id WHERE car_name IN ('Maruti') ORDER BY owner_id;
 select rental_id,car_id,customer_id,km_driven from rental where return_date in ('2018-03-10') order by rental_id;
