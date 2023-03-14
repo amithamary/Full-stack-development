@@ -1,4 +1,4 @@
-use amitha;
+
 create table car(
 	car_id varchar(10),
 	car_name varchar(20),
